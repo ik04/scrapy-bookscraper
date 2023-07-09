@@ -4,6 +4,15 @@ from bookscraper.items import BookItem
 
 class BookspiderSpider(scrapy.Spider):
     name = "bookspider"
+    custom_settings = {
+        "ITEM_PIPELINES": {
+            "bookscraper.pipelines.BookscraperPipeline": 300,
+        },
+        "FEEDS": {
+            "booksdata.json": {"format": "json"},
+            "booksdata.csv": {"format": "csv"},
+        },
+    }
     allowed_domains = ["books.toscrape.com"]
     start_urls = ["https://books.toscrape.com"]
 

@@ -34,3 +34,7 @@ class BookItem(scrapy.Item):
     category = scrapy.Field()
     description = scrapy.Field()
     price = scrapy.Field()
+
+
+class CategoryItem(scrapy.Item):
+    category = scrapy.Field()

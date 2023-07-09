@@ -66,3 +66,7 @@ class BookscraperPipeline:
             adapter["stars"] = 0
 
         return item
+
+
+class CategoryScraperPipeline:
+    pass
